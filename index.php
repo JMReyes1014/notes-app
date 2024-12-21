@@ -88,7 +88,7 @@ function decrypt($data) {
 
                 echo '
                 <div class="note">
-                    <span>' . htmlspecialchars($content) . '</span>
+                    <span class="note-span">' . htmlspecialchars($content) . '</span>
                     <div class="note-footer">
                         <small>' . htmlspecialchars($date) . '</small>
                         <div class="delete-icon"><a href="assets/php/delete.php?deleteid='.$id.'" style="text-decoration: none; color: black;" onclick="return confirm(\''.$confirm_del.'\')"><i class="las la-trash-alt" style="font-size: 1.3em;"></i></a></div>
