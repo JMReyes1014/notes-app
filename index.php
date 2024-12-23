@@ -30,8 +30,8 @@ if (isset($_SESSION['login_success'])) {
 
 // Define encryption method and secret key
 define('ENCRYPTION_METHOD', 'AES-256-CBC');
-define('SECRET_KEY', 'your_secret_key_here');  // Replace this with your actual secret key
-define('SECRET_IV', 'your_secret_iv_here');    // Replace this with your actual IV (Initialization Vector)
+define('SECRET_KEY', 'I_Love_Pizza_Secret_Key');
+define('SECRET_IV', 'I_Also_Like_Chocolate_Secret_IV');
 
 // Function to decrypt data
 function decrypt($data) {

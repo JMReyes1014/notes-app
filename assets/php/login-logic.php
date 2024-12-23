@@ -19,11 +19,11 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 
     // Check if username is empty
     if(empty($user)) {
-        header("Location: login.php?error=username is required"); // Redirect with error message
-        exit(); // Stop further script execution
+        header("Location: login.php?error=username is required");
+        exit();
     } else if(empty($pass)) {
-        header("Location: login.php?error=password is required"); // Redirect with error message
-        exit(); // Stop further script execution
+        header("Location: login.php?error=password is required");
+        exit();
     }
 
     // SQL query to select user with matching username
@@ -45,15 +45,15 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             header("Location: ../../index.php"); // Redirect to index page
             exit(); // Stop further script execution
         } else {
-            header("Location: login.php?error=Incorrect username or password"); // Redirect with error message
+            header("Location: login.php?error=Incorrect username or password");
             exit(); // Stop further script execution
         }
     } else {
-        header("Location: login.php?error=Incorrect username or password"); // Redirect with error message
+        header("Location: login.php?error=Incorrect username or password");
         exit(); // Stop further script execution
     }
 } else {
-    header("Location: login.php?error=Both fields are required"); // Redirect with error message
+    header("Location: login.php?error=Both fields are required");
     exit(); // Stop further script execution
 }
 ?>
