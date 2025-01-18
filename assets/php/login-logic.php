@@ -1,10 +1,10 @@
-<?php 
-session_start(); // Start session to manage user session data
-include "connect.php"; // Include file for database connection
+<?php
+session_start();
+include "connect.php";
 
 // Check if username and password are submitted via POST
 if(isset($_POST['username']) && isset($_POST['password'])) {
-    
+
     // Function to sanitize and validate input data
     function validate($data) {
         $data = trim($data); // Remove whitespace from beginning and end
@@ -41,8 +41,10 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             // Set session variables to store user data
             $_SESSION['username'] = $row['username'];
             $_SESSION['user_id'] = $row['user_id'];
-            $_SESSION['login_success'] = true; // Set login success flag
-            header("Location: ../../index.php"); // Redirect to index page
+            $_SESSION['login_success'] = 'Login successful!'; // Set login success message
+
+            // Redirect to index.php without query parameters
+            header("Location: ../../index.php");
             exit(); // Stop further script execution
         } else {
             header("Location: login.php?error=Incorrect username or password");

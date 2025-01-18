@@ -71,22 +71,4 @@ if (isset($_GET['error'])) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
- <!-- Add the success alert if it exists in the URL -->
- <?php
-    if (isset($_GET['success'])) {
-        echo "
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: '" . htmlspecialchars($_GET['success']) . "',
-                confirmButtonText: 'OK',
-                confirmButtonColor: 'gray',
-                background: '#0e0d0d',
-                color: 'white'
-            });
-        </script>
-        ";
-    }
-  ?>
-
 </html>
